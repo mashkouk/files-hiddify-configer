@@ -400,7 +400,7 @@ def add_tls_fragmentation_stream_settings(base: dict, proxy: dict):
             base['streamSettings']['sockopt'] = {
                 'tcpFastOpen': True,
                 'dialerProxy': 'fragment',
-                'tcpKeepAliveIdle': 60,
+                'tcpKeepAliveIdle': 100,
                 'tcpNoDelay': True,  # recommended to be enabled with "tcpMptcp": true.
                 "mark": 255
                 # 'tcpFastOpen': True, # the system default setting be used.
