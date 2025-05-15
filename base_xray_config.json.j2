@@ -1,5 +1,6 @@
 {
   "remarks": "{{remarks}}",
+  "ipStrategy": "ipv4_only",
   "dns": {
     "servers": [
       "8.8.4.4",
@@ -12,14 +13,6 @@
       "port": 10808,
       "listen": "127.0.0.1",
       "protocol": "socks",
-      "sniffing": {
-        "enabled": false,
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "routeOnly": false
-      },
       "settings": {
         "auth": "noauth",
         "udp": true,
@@ -31,14 +24,6 @@
       "port": 10809,
       "listen": "127.0.0.1",
       "protocol": "http",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "routeOnly": false
-      },
       "settings": {
         "auth": "noauth",
         "udp": true,
@@ -51,7 +36,7 @@
       "tag": "fragment",
       "protocol": "freedom",
       "settings": {
-        "domainStrategy": "AsIs"
+        "domainStrategy": "UseIPv4"
         {% if hconfig(ConfigEnum.tls_fragment_enable) %}
         ,"fragment": {
           "packets": "tlshello",
@@ -67,10 +52,10 @@
           "tcpKeepAliveIdle": 100
         }
       }
-   }
+    }
   ],
   "routing": {
-    "domainStrategy": "AsIs",
+    "domainStrategy": "UseIPv4",
     "rules": []
   }
 }
