@@ -402,7 +402,8 @@ def add_tls_fragmentation_stream_settings(base: dict, proxy: dict):
                 'dialerProxy': 'fragment',
                 'tcpKeepAliveIdle': 100,
                 'tcpNoDelay': True,  # recommended to be enabled with "tcpMptcp": true.
-                "mark": 255
+                "mark": 255,
+                'ipStrategy': 'ipv4_only'
                 # 'tcpFastOpen': True, # the system default setting be used.
                 # 'tcpKeepAliveInterval': 0, # 0 means default GO lang settings, -1 means not enable
                 # 'tcpcongestion': bbr, # Not configuring means using the system default value
