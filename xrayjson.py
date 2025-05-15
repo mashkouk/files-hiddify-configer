@@ -398,6 +398,7 @@ def add_tls_fragmentation_stream_settings(base: dict, proxy: dict):
     if base['streamSettings']['security'] in ['tls', 'reality']:
         if proxy.get('tls_fragment_enable'):
             base['streamSettings']['sockopt'] = {
+                'ipStrategy': 'ipv4_only',
                 'tcpFastOpen': True,
                 'dialerProxy': 'fragment',
                 'tcpKeepAliveIdle': 100,
