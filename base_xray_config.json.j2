@@ -46,6 +46,7 @@
       },
       "streamSettings": {
         "sockopt": {
+          "ipStrategy": "ipv4_only",
           "tcpFastOpen": true,
           "tcpNoDelay": true,
           "tcpKeepAliveIdle": 100
@@ -54,7 +55,7 @@
     }
   ],
   "routing": {
-    "domainStrategy": "AsIs",
+    "domainStrategy": "UseIPv4",
     "rules": []
   }
 }
