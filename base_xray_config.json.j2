@@ -12,14 +12,6 @@
       "port": 10808,
       "listen": "127.0.0.1",
       "protocol": "socks",
-      "sniffing": {
-        "enabled": false,
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "routeOnly": false
-      },
       "settings": {
         "auth": "noauth",
         "udp": true,
@@ -31,14 +23,6 @@
       "port": 10809,
       "listen": "127.0.0.1",
       "protocol": "http",
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ],
-        "routeOnly": false
-      },
       "settings": {
         "auth": "noauth",
         "udp": true,
@@ -67,7 +51,7 @@
           "tcpKeepAliveIdle": 100
         }
       }
-   }
+    }
   ],
   "routing": {
     "domainStrategy": "AsIs",
