@@ -52,10 +52,31 @@
           "tcpKeepAliveIdle": 100
         }
       }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
     }
   ],
   "routing": {
     "domainStrategy": "UseIPv4",
-    "rules": []
+    "rules": [
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "domain": [
+          "domain:ir"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": [
+          "geoip:private",
+          "geoip:ir"
+        ]
+      }
+    ]
   }
 }
