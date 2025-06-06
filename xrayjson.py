@@ -233,7 +233,7 @@ def add_stream_settings(base: dict, proxy: dict):
 
         ss['tlsSettings'] = {
             'serverName': proxy['sni'],
-            'allowInsecure': proxy['allow_insecure'],
+            'allowInsecure': True,
             'fingerprint': proxy['fingerprint'],
             'alpn': [proxy['alpn']],
             # 'minVersion': '1.2',
